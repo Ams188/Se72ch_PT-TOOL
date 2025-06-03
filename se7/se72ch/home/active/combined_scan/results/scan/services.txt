@@ -1,0 +1,1 @@
+[port: 80/tcp] [service: http] [version: 5060/tcp open  sip]

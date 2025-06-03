@@ -1,0 +1,105 @@
+GET / HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+Host: 0ac700f0030d494d810607d900fa0054.web-security-academy.net
+Cookie: session=x6haCA0mMFqRGRKsbr8VTjSVVGmQq1FK
+
+
+==========
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+Connection: close
+Content-Length: 1664
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href=/resources/labheader/css/academyLabHeader.css rel=stylesheet>
+        <link href=/resources/css/labsBlog.css rel=stylesheet>
+        <title>Reflected XSS into HTML context with nothing encoded</title>
+    </head>
+    <body>
+        <script src="/resources/labheader/js/labHeader.js"></script>
+        <div id="academyLabHeader">
+            <section class='academyLabBanner'>
+                <div class=container>
+                    <div class=logo></div>
+                        <div class=title-container>
+                            <h2>Reflected XSS into HTML context with nothing encoded</h2>
+                            <a class=link-back href='https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded'>
+                                Back&nbsp;to&nbsp;lab&nbsp;description&nbsp;
+                                <svg version=1.1 id=Layer_1 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x=0px y=0px viewBox='0 0 28 30' enable-background='new 0 0 28 30' xml:space=preserve title=back-arrow>
+                                    <g>
+                                        <polygon points='1.4,0 0,1.2 12.6,15 0,28.8 1.4,30 15.1,15'></polygon>
+                                        <polygon points='14.3,0 12.9,1.2 25.6,15 12.9,28.8 14.3,30 28,15'></polygon>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class='widgetcontainer-lab-status is-notsolved'>
+                            <span>LAB</span>
+                            <p>Not solved</p>
+                            <span class=lab-status-icon></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div theme="blog">
+            <section class="maincontainer">
+                <div class="container is-page">
+                    <header class="navigation-header">
+                        <section class="top-links">
+                            <a href=/>Home</a><p>|</p>
+                        </section>
+                    </header>
+                    <header class="notification-header">
+                    </header>
+                    <section class=blog-header>
+                        <h1>4 search results for 'show'</h1>
+                        <hr>
+                    </section>
+                    <section class=search>
+                        <form action=/ method=GET>
+                            <input type=text placeholder='Search the blog...' name=search>
+                            <button type=submit class=button>Search</button>
+                        </form>
+                    </section>
+                    <section class="blog-list">
+                        <div class="blog-post">
+                        <a href="/post?postId=4"><img src="/image/blog/posts/59.jpg"></a>
+                        <h2>Festivals</h2>
+                        <p>Reminiscing about festivals is a lot like reminiscing about university. In your head there's those wild party nights, meeting cool new people and the great experience of being away from home. Very similar to the buzz about going to a...</p>
+                        <a class="button is-small" href="/post?postId=4">View post</a>
+                        </div>
+                        <div class="blog-post">
+                        <a href="/post?postId=3"><img src="/image/blog/posts/25.jpg"></a>
+                        <h2>Tracking Your Kids</h2>
+                        <p>It's not Big Brother who's watching you, it's your folks! The first generation of datafied children is hitting the streets. What does this mean? Basically, we know where they are, where they've been and when they were last 'live' on...</p>
+                        <a class="button is-small" href="/post?postId=3">View post</a>
+                        </div>
+                        <div class="blog-post">
+                        <a href="/post?postId=1"><img src="/image/blog/posts/43.jpg"></a>
+                        <h2>New Year - New Friends</h2>
+                        <p>It's always the same. A new year begins and those people you thought were your friends go, well, a bit weird. Your nearest and dearest, between them, have a very long list of things they want to change about themselves....</p>
+                        <a class="button is-small" href="/post?postId=1">View post</a>
+                        </div>
+                        <div class="blog-post">
+                        <a href="/post?postId=5"><img src="/image/blog/posts/64.jpg"></a>
+                        <h2>Procrastination</h2>
+                        <p>Procrastination. Putting off something or several things you really should be doing by finding endless nonsense to occupy yourself. This may be an unpopular opinion, but procrastination can be handy, it leads to some really menial tasks being done. Thinking...</p>
+                        <a class="button is-small" href="/post?postId=5">View post</a>
+                        </div>
+                        <div class=is-linkback>
+        <a href="/">Back to Blog</a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <div class="footer-wrapper">
+            </div>
+        </div>
+    </body>
+</html>

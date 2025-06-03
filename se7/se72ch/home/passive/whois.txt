@@ -1,0 +1,18 @@
+Domain_name: VULNWEB.COM, vulnweb.com
+Registrar: Eurodns S.A.
+Whois_server: whois.eurodns.com
+Referral_url: None
+Updated_date: 2025-05-20 08:14:02, 2025-05-21 15:16:31
+Creation_date: 2010-06-14 07:50:29, 2010-06-14 00:00:00
+Expiration_date: 2026-06-14 07:50:29, 2026-06-13 00:00:00
+Name_servers: NS1.EURODNS.COM, NS2.EURODNS.COM, NS3.EURODNS.COM, NS4.EURODNS.COM, ns1.eurodns.com, ns2.eurodns.com, ns3.eurodns.com, ns4.eurodns.com
+Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited, clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Emails: legalservices@eurodns.com, administrator@invicti.com
+Dnssec: unsigned
+Name: Antevski Gjorgji
+Org: Acunetix Limited
+Address: Mirabilis Building Level 2, Triq L-Intornjatur
+City: Mriehel
+State: None
+Registrant_postal_code: CBD 3050
+Country: MT

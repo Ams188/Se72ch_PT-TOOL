@@ -1,0 +1,18 @@
+Domain_name: CTFMAKERS.COM
+Registrar: TUCOWS, INC.
+Whois_server: whois.tucows.com
+Referral_url: None
+Updated_date: 2025-03-11 00:22:26
+Creation_date: 2024-03-11 15:44:18
+Expiration_date: 2026-03-11 15:44:18
+Name_servers: NS1.SYSTEMDNS.COM, NS2.SYSTEMDNS.COM, NS3.SYSTEMDNS.COM, ns1.systemdns.com, ns2.systemdns.com, ns3.systemdns.com
+Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited, clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Emails: domainabuse@tucows.com, integrations@durable.co
+Dnssec: unsigned
+Name: REDACTED FOR PRIVACY
+Org: REDACTED FOR PRIVACY
+Address: REDACTED FOR PRIVACY
+City: REDACTED FOR PRIVACY
+State: BC
+Registrant_postal_code: REDACTED FOR PRIVACY
+Country: CA

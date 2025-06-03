@@ -1,0 +1,3 @@
+"v=spf1 include:zohomail.com ~all"
+"brevo-code:b95556deaf0adf98987bcd318e5fe1b3"
+"v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"

@@ -1,0 +1,6 @@
+POST
+http://testphp.vulnweb.com/search.php
+searchFor
+optional
+/search.php?test=query
+searchFor=free

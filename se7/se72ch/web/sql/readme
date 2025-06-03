@@ -1,0 +1,88 @@
+# SQLi Scanner
+
+A lightweight SQL Injection scanner supporting GET and POST requests, with automatic parameter detection and support for error-based, boolean-based, and time-based SQLi detection.
+
+---
+
+## 🔧 Features
+
+* ✅ Detects SQLi via:
+
+  * Error-based
+  * Boolean-based
+  * Time-based techniques
+* ✅ Supports:
+
+  * GET and POST methods
+  * Custom headers: `Cookie`, `User-Agent`, `Referer`
+* ✅ Auto-detects parameters (no need for manual count)
+* ✅ Saves scan output to `result.txt`
+* ✅ Saves raw HTML response to `response.txt` for debugging
+
+---
+
+## 🚀 Usage
+
+```bash
+python3 edit.py -u "<target_url>" [options]
+```
+
+### Required:
+
+* `-u, --url`: Target URL to scan.
+
+### Optional:
+
+* `--data`: POST data, comma-separated (e.g. `username=admin,password=123`)
+* `--det`: Index of parameter to test (e.g., `0` for first param)
+* `--all`: Scan all parameters at once
+* `--cookie`: Add custom `Cookie` header
+* `--user-agent`: Set custom User-Agent
+* `--referer`: Set custom Referer
+
+---
+
+## 📌 Examples
+
+### GET Request (single parameter)
+
+```bash
+python3 edit.py -u "http://testphp.vulnweb.com/artists.php?artist=1" --det=0
+```
+
+### POST Request (scan 1 parameter)
+
+```bash
+python3 edit.py -u "https://example.com/login" --data "username=admin,password=123" --det=0
+```
+
+### POST Request (scan all parameters)
+
+```bash
+python3 edit.py -u "https://example.com/login" --data "username=admin,password=123" --all
+```
+
+### With custom headers
+
+```bash
+python3 edit.py -u "http://example.com/page" --cookie "session=xyz" --referer "http://ref.com" --user-agent "ScannerBot/1.0" --all
+```
+
+---
+
+## 🗂 Output
+
+* `result.txt`: Scan results and detected payloads
+* `response.txt`: Raw server response (for debugging)
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is intended for **educational and authorized testing purposes only**. Do not use against systems without permission.
+
+---
+
+## 📬 Contact
+
+For feedback or improvements, feel free to reach out.

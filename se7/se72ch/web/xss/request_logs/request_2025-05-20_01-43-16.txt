@@ -1,0 +1,90 @@
+GET /?page=cookie_get_xss HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+Host: 127.0.0.1:9342
+Cookie: session=get_session
+
+Query Parameters:
+page: cookie_get_xss
+input: rock
+
+
+==========
+
+HTTP/1.1 200 OK
+Server: nginx/1.27.5
+Date: Mon, 19 May 2025 22:43:16 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/8.2.28
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .highlight {
+            color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🚩 XSS Challenge Playground</h2>
+    </header>
+    <main><h3>Search (GET - Cookie Protected)</h3><form method="get"><input type="hidden" name="page" value="cookie_get_xss"><input type="text" name="input" placeholder="Type something to search"><input type="submit" value="Search"></form><hr><p>Search results for: <span class="highlight">rock</span></p>    </main>
+    <footer>
+        &copy; 2025 se72ch Labs | All rights reserved
+    </footer>
+</body>
+</html>

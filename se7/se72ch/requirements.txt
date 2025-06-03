@@ -1,0 +1,10 @@
+requests
+beautifulsoup4
+faker
+wafw00f
+urllib3
+lxml
+idna
+chardet
+certifi
+tk

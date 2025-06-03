@@ -1,0 +1,137 @@
+POST /post_xss.php HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+Host: 127.0.0.1:9342
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 12
+
+input=likely
+
+==========
+
+HTTP/1.1 200 OK
+Server: nginx/1.27.5
+Date: Thu, 29 May 2025 14:55:32 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/8.2.28
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Challenge - POST XSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #e6effd, #f7f9fc);
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1e3a8a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+        header h2 {
+            margin: 0;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        footer {
+            background: #1e3a8a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        input[type="submit"] {
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        input[type="submit"]:hover {
+            background: #047857;
+            transform: translateY(-1px);
+        }
+        .highlight {
+            color: #065f46;
+            font-weight: 600;
+            background: #d1fae5;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        h3 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e5e7eb;
+            margin: 1.5rem 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🚩 XSS Challenge Playground</h2>
+    </header>
+    <main><h3>POST XSS Demo</h3><form method="post"><input type="text" name="input" placeholder="Type something"><input type="submit" value="Send"></form><hr><p>You submitted: <span class="highlight">likely</span></p>    </main>
+    <footer>
+        © 2025 se72ch Labs | All rights reserved
+    </footer>
+</body>
+</html>
